@@ -1,0 +1,38 @@
+/* 热词滚动区域 */
+.hotwords-wrapper {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hotwords-list {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+.hotword-item {
+    height: 20px;
+    line-height: 20px;
+    color: #888;
+    font-size: 15px;
+    white-space: nowrap;
+    user-select: none;
+    transition: color 0s;
+}
+
+/* 遮住 input placeholder */
+#search-input::placeholder {
+    color: transparent;
+}
+
+/* 聚焦时热词淡化 */
+.hotwords-wrapper.faded .hotword-item {
+    color: #c6c6c6 !important;
+    transition: color 0s;
+}

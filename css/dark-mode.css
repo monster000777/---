@@ -1,0 +1,536 @@
+/* ======= 全局暗色主题美化和细节修正 ======= */
+
+/* 全局背景和字体颜色调整 */
+body.dark, .dark body {
+    background-color: #181926 !important;
+    color: #ececec !important;
+}
+
+body.dark, .dark * {
+    scrollbar-color: #23283b #1e2130;
+}
+
+/* 顶部通知栏（广告） */
+body.dark #a1, .dark #a1 {
+    background: linear-gradient(90deg, #fbbf24 0%, #fb7185 100%) !important;
+    color: #23283b !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px 0 rgba(230, 200, 60, 0.10);
+}
+
+/* 顶部主导航栏分类项字体及hover效果统一 */
+body.dark .nav-item,
+.dark .nav-item {
+    color: #f3f6fa !important;
+    transition: color .2s, background .2s;
+    background: none !important;
+}
+
+body.dark .nav-item:hover,
+.dark .nav-item:hover,
+body.dark .nav-item:focus,
+.dark .nav-item:focus {
+    color: #ffd966 !important;
+    background: none !important;
+}
+
+body.dark .nav-item.active,
+.dark .nav-item.active {
+    color: #ffd966 !important;
+    background: none !important;
+}
+
+/* 顶部导航栏分类项下拉菜单字体统一 */
+body.dark .group:hover .group-hover\:block,
+.dark .group:hover .group-hover\:block,
+body.dark .group:focus .group-hover\:block,
+.dark .group:focus .group-hover\:block {
+    display: block !important;
+}
+
+body.dark .group .absolute > a,
+.dark .group .absolute > a,
+body.dark .group .absolute .block,
+.dark .group .absolute .block {
+    color: #ececec !important;
+    background: transparent !important;
+    transition: color .2s, background .2s;
+}
+
+body.dark .group .absolute > a:hover,
+.dark .group .absolute > a:hover,
+body.dark .group .absolute .block:hover,
+.dark .group .absolute .block:hover {
+    color: #ffd966 !important;
+    background: #31364d !important;
+}
+
+/* 下导航栏分类标签区字体亮色、hover/active高亮、边框条 */
+body.dark #nav a,
+.dark #nav a {
+    color: #f3f6fa !important;
+    font-weight: 500;
+    background: none !important;
+    border-bottom: 2.5px solid transparent !important;
+    transition: color .2s, border-bottom .2s;
+}
+
+body.dark #nav a:hover,
+.dark #nav a:focus,
+.dark #nav a.active,
+body.dark #nav a.active,
+body.dark #nav a[aria-current="page"] {
+    color: #ffd966 !important;
+    border-bottom: 2.5px solid #ffd966 !important;
+    background: none !important;
+}
+
+body.dark #nav a.text-primary,
+.dark #nav a.text-primary {
+    color: #ffd966 !important;
+    border-bottom: 2.5px solid #ffd966 !important;
+}
+
+/* 下导航栏原红色条变亮蓝色，且hover时可见 */
+body.dark .border-b-2.border-primary,
+.dark .border-b-2.border-primary {
+    border-bottom: 2.5px solid #7eb6ff !important;
+}
+
+body.dark #nav a:not(:hover):not(.text-primary):not(.active),
+.dark #nav a:not(:hover):not(.text-primary):not(.active) {
+    border-bottom: 2.5px solid transparent !important;
+}
+
+/* 分类下拉菜单字体和背景（左侧栏与下拉） */
+body.dark .category-item .flex.items-center span,
+.dark .category-item .flex.items-center span {
+    color: #ececec !important;
+}
+
+body.dark .category-item .fa,
+.dark .category-item .fa {
+    color: #a0bfff !important;
+}
+
+body.dark .category-item .fa-angle-down,
+.dark .category-item .fa-angle-down {
+    color: #b1b4c6 !important;
+}
+
+body.dark .category-item .hover\:bg-gray-light:hover,
+.dark .category-item .hover\:bg-gray-light:hover {
+    background-color: #31364d !important;
+}
+
+/* 二级菜单字体和hover */
+body.dark .sub-category a,
+.dark .sub-category a {
+    color: #ececec !important;
+    background: transparent !important;
+    transition: color .2s, background .2s;
+}
+
+body.dark .sub-category a:hover,
+.dark .sub-category a:hover {
+    background-color: #31364d !important;
+    color: #ffd966 !important;
+}
+
+/* 主要内容和卡片背景 */
+body.dark .bg-white,
+body.dark .recommend-item,
+body.dark .category-container,
+body.dark .category-item,
+body.dark .popup,
+body.dark .p-4,
+body.dark .bg-light,
+body.dark .bg-gray-light,
+body.dark .bg-neutral-50,
+body.dark .bg-neutral-100,
+body.dark .bg-neutral-200,
+body.dark .bg-neutral-300,
+body.dark .bg-gray-100,
+body.dark .bg-gray-200,
+body.dark .bg-gray-300,
+.dark .bg-white,
+.dark .recommend-item,
+.dark .category-container,
+.dark .category-item,
+.dark .popup,
+.dark .p-4,
+.dark .bg-light,
+.dark .bg-gray-light,
+.dark .bg-neutral-50,
+.dark .bg-neutral-100,
+.dark .bg-neutral-200,
+.dark .bg-neutral-300,
+.dark .bg-gray-100,
+.dark .bg-gray-200,
+.dark .bg-gray-300 {
+    background-color: #23283b !important;
+    color: #ececec !important;
+    border-color: #32384c !important;
+}
+
+/* ===== 商品卡片阴影和背景提升对比度 ===== */
+body.dark .bg-white.rounded-lg.shadow-sm,
+.dark .bg-white.rounded-lg.shadow-sm,
+body.dark .bg-white.rounded-lg.overflow-hidden,
+.dark .bg-white.rounded-lg.overflow-hidden {
+    background-color: #232c45 !important; /* 提亮卡片背景 */
+    box-shadow: 0 6px 32px 0 #10131a99, 0 1.5px 8px 0 #5167b888 !important; /* 更明显阴影 */
+    border-radius: 18px !important;
+}
+
+body.dark .bg-white.rounded-lg.shadow-sm:hover,
+.dark .bg-white.rounded-lg.shadow-sm:hover,
+body.dark .bg-white.rounded-lg.overflow-hidden:hover,
+.dark .bg-white.rounded-lg.overflow-hidden:hover {
+    background-color: #263055 !important; /* 降低提亮，较 #293052 更加内敛协调 */
+    box-shadow: 0 10px 36px 0 #22315788, 0 2px 12px 0 #7eb6ff33 !important; /* 阴影主色为蓝灰，弱化黄色 */
+}
+
+/* 商品卡片内容区域再提亮一点（含p-4） */
+body.dark .bg-white.rounded-lg.shadow-sm .p-4,
+body.dark .bg-white.rounded-lg.overflow-hidden .p-4,
+.dark .bg-white.rounded-lg.shadow-sm .p-4,
+.dark .bg-white.rounded-lg.overflow-hidden .p-4 {
+    background-color: #232c45 !important;
+}
+
+/* 商品卡片图片上方徽标（如“热销”、“新品”等）更显眼 */
+body.dark .bg-white.rounded-lg.shadow-sm .absolute.top-3.left-3 > span,
+body.dark .bg-white.rounded-lg.overflow-hidden .absolute.top-3.left-3 > span,
+.dark .bg-white.rounded-lg.shadow-sm .absolute.top-3.left-3 > span,
+.dark .bg-white.rounded-lg.overflow-hidden .absolute.top-3.left-3 > span {
+    box-shadow: 0 2px 12px #23283b55;
+    font-weight: 600;
+}
+
+/* 商品卡片hover高亮 */
+body.dark .hover\:bg-gray-light:hover,
+body.dark .hover\:shadow-md:hover,
+.dark .hover\:bg-gray-light:hover,
+.dark .hover\:shadow-md:hover {
+    background-color: #263055 !important;
+    box-shadow: 0 10px 36px 0 #22315788, 0 2px 12px 0 #7eb6ff33 !important;
+}
+
+/* 黑色字体变为淡白，灰色字体变淡灰 */
+body.dark .text-dark,
+.dark .text-dark,
+body.dark .text-neutral-700,
+.dark .text-neutral-700 {
+    color: #f3f6fa !important;
+}
+
+body.dark .text-gray-dark,
+.dark .text-gray-dark {
+    color: #dbdbe7 !important;
+}
+
+body.dark .text-gray-medium,
+.dark .text-gray-medium,
+body.dark .text-custom-gray,
+.dark .text-custom-gray,
+body.dark .text-neutral-500,
+.dark .text-neutral-500 {
+    color: #b1b4c6 !important;
+}
+
+body.dark .text-neutral-600,
+.dark .text-neutral-600 {
+    color: #c2c3d1 !important;
+}
+
+/* 所有输入框&搜索框 */
+body.dark input,
+.dark input {
+    background-color: #202539 !important;
+    color: #ececec !important;
+    border-color: #384066 !important;
+}
+
+body.dark input:focus,
+.dark input:focus {
+    background-color: #23283b !important;
+    border-color: #5167b8 !important;
+}
+
+body.dark .bg-primary,
+.dark .bg-primary {
+    background-color: #5167b8 !important;
+}
+
+body.dark .hover\:bg-primary:hover,
+.dark .hover\:bg-primary:hover {
+    background-color: #6c7ee1 !important;
+    color: #fff !important;
+}
+
+body.dark .bg-secondary,
+.dark .bg-secondary {
+    background-color: #8e6cd1 !important;
+}
+
+body.dark .bg-green-500,
+.dark .bg-green-500 {
+    background-color: #41b39d !important;
+}
+
+body.dark .bg-purple-600,
+.dark .bg-purple-600 {
+    background-color: #7e5fff !important;
+}
+
+/* 主要色彩文本 */
+body.dark .text-primary,
+.dark .text-primary {
+    color: #a0bfff !important;
+}
+
+body.dark .text-secondary,
+.dark .text-secondary {
+    color: #b5a7ff !important;
+}
+
+body.dark .text-yellow-600,
+.dark .text-yellow-600 {
+    color: #ffeb99 !important;
+}
+
+body.dark .text-green-600,
+.dark .text-green-600 {
+    color: #7fffd4 !important;
+}
+
+/* 轮播图照片本身不暗化，恢复正常色调 */
+body.dark .carousel-item img,
+.dark .carousel-item img {
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+}
+
+/* ====== 轮播图遮罩透明，内容可见，不再叠加暗色 ====== */
+body.dark .carousel-item .bg-gradient-to-r,
+.dark .carousel-item .bg-gradient-to-r {
+    background: none !important;
+    backdrop-filter: none !important;
+    opacity: 1 !important;
+}
+
+body.dark .carousel-item h3,
+.dark .carousel-item h3 {
+    color: #fff !important;
+    text-shadow: 0 4px 16px rgba(30, 34, 56, 0.94);
+}
+
+body.dark .carousel-item p,
+.dark .carousel-item p {
+    color: #f3f6fa !important;
+    text-shadow: 0 2px 12px rgba(30, 34, 56, 0.86);
+}
+
+/* 轮播图按钮高亮 */
+body.dark .carousel-item button,
+.dark .carousel-item button {
+    background: #a0bfff !important;
+    color: #23283b !important;
+    border: none;
+}
+
+body.dark .carousel-item button:hover,
+.dark .carousel-item button:hover {
+    background: #6c7ee1 !important;
+    color: #fff !important;
+}
+
+/* 轮播指示器和左右按钮 */
+body.dark .carousel-indicator,
+.dark .carousel-indicator {
+    background: #384066 !important;
+    border: 1.5px solid #a0bfff !important;
+}
+
+body.dark .carousel-indicator.active,
+.dark .carousel-indicator.active {
+    background: #ffd966 !important;
+    border-color: #ffd966 !important;
+    box-shadow: 0 0 4px #ffd96655;
+}
+
+body.dark .carousel-prev,
+body.dark .carousel-next,
+.dark .carousel-prev,
+.dark .carousel-next {
+    background: #202539cc !important;
+    color: #ffd966 !important;
+    border: 1.5px solid #ffd96666;
+}
+
+body.dark .carousel-prev:hover,
+body.dark .carousel-next:hover,
+.dark .carousel-prev:hover,
+.dark .carousel-next:hover {
+    background: #ffd966 !important;
+    color: #23283b !important;
+}
+
+/* 轮播下方导航栏图标对比提升（分类图标区） */
+body.dark .grid > a > div,
+.dark .grid > a > div {
+    background: #384066 !important;
+    border: 2px solid #a0bfff !important;
+    box-shadow: 0 2px 12px 0 #13162444;
+}
+
+body.dark .grid > a > div > i,
+.dark .grid > a > div > i {
+    color: #ffd966 !important;
+    filter: drop-shadow(0 2px 8px #ffd96666);
+}
+
+body.dark .grid > a > span,
+.dark .grid > a > span {
+    color: #f3f6fa !important;
+    font-weight: 600;
+}
+
+/* 侧边栏分类列表字体高亮 */
+body.dark .category-list .category-item .flex.items-center span,
+.dark .category-list .category-item .flex.items-center span {
+    color: #ececec !important;
+}
+
+/* 浮动工具栏按钮 */
+body.dark .fixed > button,
+body.dark .fixed > a,
+.dark .fixed > button,
+.dark .fixed > a {
+    background: #202539 !important;
+    color: #ffd966 !important;
+    border: 1px solid #384066 !important;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+body.dark .fixed > button:hover,
+body.dark .fixed > a:hover,
+.dark .fixed > button:hover,
+.dark .fixed > a:hover {
+    background: #23283b !important;
+    color: #a0bfff !important;
+    border-color: #a0bfff !important;
+}
+
+body.dark .fixed > button > i,
+body.dark .fixed > a > i,
+.dark .fixed > button > i,
+.dark .fixed > a > i {
+    color: inherit !important;
+    transition: color 0.2s;
+}
+
+/* 底部区域及服务条 */
+body.dark footer,
+.dark footer {
+    background: #191c29 !important;
+    color: #b1b4c6 !important;
+}
+
+body.dark .service p,
+.dark .service p {
+    color: #ececec !important;
+}
+
+/* 弹窗与mask */
+body.dark .popup-mask,
+.dark .popup-mask {
+    background: rgba(21, 23, 34, 0.7) !important;
+}
+
+body.dark .popup,
+.dark .popup {
+    background: #292c3c !important;
+    color: #f1eaff !important;
+}
+
+/* 广告区域渐变适配 */
+body.dark .bg-gradient-to-r,
+.dark .bg-gradient-to-r {
+    background-image: linear-gradient(to right, #23283b, #5167b8) !important;
+}
+
+/* 其它辅助区域及滚动条 */
+body.dark .bg-green-500,
+.dark .bg-green-500 {
+    background-color: #41b39d !important;
+}
+
+body.dark .bg-purple-600,
+.dark .bg-purple-600 {
+    background-color: #7e5fff !important;
+}
+
+body.dark .bg-yellow-100,
+.dark .bg-yellow-100 {
+    background-color: #ffd96622 !important;
+}
+
+body.dark .bg-blue-600,
+.dark .bg-blue-600 {
+    background-color: #5167b8 !important;
+}
+
+body.dark .bg-red-100,
+.dark .bg-red-100 {
+    background-color: #fb718522 !important;
+}
+
+body.dark .bg-green-100,
+.dark .bg-green-100 {
+    background-color: #41b39d22 !important;
+}
+
+body.dark .bg-purple-100,
+.dark .bg-purple-100 {
+    background-color: #7e5fff22 !important;
+}
+
+body.dark .border,
+.dark .border {
+    border-color: #32384c !important;
+}
+
+body.dark ::-webkit-scrollbar,
+.dark ::-webkit-scrollbar {
+    width: 8px;
+    background: #23283b;
+}
+
+body.dark ::-webkit-scrollbar-thumb,
+.dark ::-webkit-scrollbar-thumb {
+    background: #384066;
+    border-radius: 4px;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover,
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #5167b8;
+}
+
+/* 购物指南模块统一商品卡风格 */
+body.dark #eight article.bg-white,
+.dark #eight article.bg-white {
+    background-color: #232c45 !important;
+    box-shadow: 0 6px 32px 0 #10131a99, 0 1.5px 8px 0 #5167b888 !important;
+    border-radius: 18px !important;
+}
+
+body.dark #eight article.bg-white:hover,
+.dark #eight article.bg-white:hover {
+    background-color: #263054 !important;
+    box-shadow: 0 14px 48px 0 #10131acc, 0 2.5px 16px 0 #ffd96633 !important;
+}
